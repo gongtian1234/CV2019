@@ -1,0 +1,1 @@
+##### 所用到的模型文件是由mnist数据集用CNN训练生成的，由于模型文件有点大，upload不上来，提供参考网址为：https://nbviewer.jupyter.org/github/gongtian1234/CV2019/blob/master/第七课keras/04_CNN进行mnist数据集分类.ipynb
