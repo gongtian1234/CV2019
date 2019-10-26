@@ -6,4 +6,5 @@
 1、https://blog.csdn.net/heiheiya/article/details/81532914#commentsedit 这是训练自己的猫狗分类参考的文章；  
 2、https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46 这是气球的那篇文章；  
 
-（由于文件太大无法上传，主要操作在07_目标分割2.ipynb都有，只是没有训练测试的结果显示）
+（由于文件太大无法上传，主要操作在07_目标分割2.ipynb都有，只是没有训练测试的结果显示）  
+备注：这些操作都是在git clone官方代码，在“MASK_RCNN”文件夹下操作的，samples把猫狗分类用到的文件放了上来
