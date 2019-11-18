@@ -3,7 +3,7 @@ import numpy as np
 from VGG16 import VGG16
 
 VGG_MEAN = [103.939, 116.779, 123.68]
-filename = './test_image/sunflowers,jpeg'
+filename = './test_images/sunflowrs.jpeg'
 checkpoint_path = './checkpoints'
 vgg16_npy_path = './vgg16.npy'
 
@@ -19,14 +19,14 @@ def _mean_image_subtraction(image):
     num_channels = image.get_shape().as_list()[-1]
     if len(means)!=num_channels:
         raise ValueError('len(means) nust match the number of channels')
-    channels = tf.split(image, num_or_size_splits=num_channels, axis=3)
+    channels = tf.split(image, num_or_size_splits=num_channels, axis=2)
     for i in range(num_channels):
         channels[i] -= means[i]
     return tf.concat(axis=2, values=channels)
 
 
 # 扩维
-image = tf.expend_dims(_mean_image_subtraction(image_data), axis=0)
+image = tf.expand_dims(_mean_image_subtraction(image_data), axis=0)
 
 with tf.Session() as sess:
     images = tf.placeholder(tf.float32, [1, 224, 224, 3])
@@ -37,12 +37,8 @@ with tf.Session() as sess:
     vgg = VGG16(vgg16_npy_path, trainable=False)
     vgg.build(images, 5, fc_rate)
     saver = tf.train.Saver()
-    if ckpt and skpt.model_checkpoint_path:
-        saver.restore(sess, ckpt.model_chechpoint_path)
+    if ckpt and ckpt.model_checkpoint_path:
+        saver.restore(sess, ckpt.model_checkpoint_path)
         print('Model restored ... fc6, fc7, fc8')
-    prob = sess.run(vgg.prob, feed_dict=feed_dict)
+    prob = sess.run(vgg.prop, feed_dict=feed_dict)
     print(prob)
-
-
-
-
