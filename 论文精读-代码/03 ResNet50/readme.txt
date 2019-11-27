@@ -1,0 +1,12 @@
+resnet50_model中只是实现了resnet50的网络结构；
+具体的使用是调用的keras.application.resnet50,具体参考resnet50_train.py；
+模型的训练数据存放格式如下：
+|image
+----|train
+    ----|1（表示类别，一个小类对应一个）
+    ----|2
+    ----|3
+----|val
+    ----|1
+    ----|2
+    ----|3
