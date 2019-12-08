@@ -1,14 +1,24 @@
-Ç°ÆÚ×¼±¸¹¤×÷£º
-¢Ù!wget http://pjreddie.com/media/files/VOCtrainval_06-Nov-2007.tarÏÂÔØ²¢½âÑ¹ÖÁdata/pascal_vocÎÄ¼ş¼ĞÏÂ
+å‰æœŸå‡†å¤‡å·¥ä½œï¼š
+â‘ !wget http://pjreddie.com/media/files/VOCtrainval_06-Nov-2007.tarä¸‹è½½å¹¶è§£å‹è‡³data/pascal_vocæ–‡ä»¶å¤¹ä¸‹
 
 
-1¡¢yolonet_v1.py°üÀ¨ÁËÍøÂçµÄ½¨Á¢ºÍlossº¯Êı£»
+1ã€yolonet_v1.pyåŒ…æ‹¬äº†ç½‘ç»œçš„å»ºç«‹å’Œlosså‡½æ•°ï¼›
 
-2¡¢config.pyÓÃÓÚ³õÊ¼»¯²ÎÊı
+2ã€config.pyç”¨äºåˆå§‹åŒ–å‚æ•°
 
-3¡¢train.pyÎªÖ÷³ÌĞò£¬ÑµÁ·ÍøÂç
-Èç¹ûÒªÑµÁ·ÍøÂç£¬Ö±½ÓÔËĞĞtrain.py¼´¿É
+3ã€train.pyä¸ºä¸»ç¨‹åºï¼Œè®­ç»ƒç½‘ç»œ
+å¦‚æœè¦è®­ç»ƒç½‘ç»œï¼Œç›´æ¥è¿è¡Œtrain.pyå³å¯
 
-4¡¢pascal_voc.py²úÉúÑµÁ·Êı¾İºÍlabel£¬Ö÷ÒªÓÃÓÚ¶ÔÊı¾İ½øĞĞÔ¤´¦Àí
+4ã€pascal_voc.pyäº§ç”Ÿè®­ç»ƒæ•°æ®å’Œlabelï¼Œä¸»è¦ç”¨äºå¯¹æ•°æ®è¿›è¡Œé¢„å¤„ç†
 
-5¡¢timer.py·â×°µÄ¼ÆÊ±Ä£¿é
+5ã€timer.pyå°è£…çš„è®¡æ—¶æ¨¡å—
+
+æ•°æ®æ–‡ä»¶å¤¹ï¼š(å…·ä½“çœ‹https://blog.csdn.net/xiaotian127/article/details/103405577)
+./data
+     |pascal_voc
+         |VOCdevkit
+             |VOC2007
+                 |Annotationsï¼ˆå­˜æ”¾çš„æ˜¯æ¯å¼ å›¾ç‰‡å¯¹åº”çš„xmlæ–‡ä»¶ï¼‰
+                 |JPEGImagesï¼ˆå­˜æ”¾çš„æ˜¯å›¾ç‰‡ï¼‰
+                 |ImageSets
+     |weightsï¼ˆå¦‚æœæ˜¯è·‘å®˜æ–¹ä»£ç çš„è¯ï¼Œè¿™é‡Œæ”¾çš„æ˜¯YOLO_small.ckptï¼‰
